@@ -1,6 +1,6 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService;
+namespace Verinder\PrestashopWebService;
 
 use PrestaShopWebservice as PSLibrary;
 use SimpleXMLElement;

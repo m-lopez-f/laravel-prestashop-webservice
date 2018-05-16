@@ -1,6 +1,6 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService;
+namespace Verinder\PrestashopWebService;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -39,7 +39,7 @@ class PrestashopWebServiceProvider extends ServiceProvider
 
     public function provides()
     {
-        return ['Protechstudio\PrestashopWebService\PrestashopWebService'];
+        return ['Verinder\PrestashopWebService\PrestashopWebService'];
     }
 
     private function publish()

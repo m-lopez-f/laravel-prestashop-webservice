@@ -1,6 +1,6 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService\Tests;
+namespace Verinder\PrestashopWebService\Tests;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -13,7 +13,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Protechstudio\PrestashopWebService\PrestashopWebServiceProvider::class,
+            \Verinder\PrestashopWebService\PrestashopWebServiceProvider::class,
         ];
     }
     /**
@@ -31,7 +31,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Prestashop' => \Protechstudio\PrestashopWebService\PrestashopWebServiceFacade::class,
+            'Prestashop' => \Verinder\PrestashopWebService\PrestashopWebServiceFacade::class,
         ];
     }
 }

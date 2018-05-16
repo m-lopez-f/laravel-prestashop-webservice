@@ -1,11 +1,11 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService\Tests;
+namespace Verinder\PrestashopWebService\Tests;
 
-use Protechstudio\PrestashopWebService\PrestashopWebService;
-use Protechstudio\PrestashopWebService\Exceptions\PrestashopWebServiceException;
-use Protechstudio\PrestashopWebService\Exceptions\PrestashopWebServiceRequestException;
-use Protechstudio\PrestashopWebService\PrestashopWebServiceLibrary;
+use Verinder\PrestashopWebService\PrestashopWebService;
+use Verinder\PrestashopWebService\Exceptions\PrestashopWebServiceException;
+use Verinder\PrestashopWebService\Exceptions\PrestashopWebServiceRequestException;
+use Verinder\PrestashopWebService\PrestashopWebServiceLibrary;
 use Prestashop;
 
 class PrestashopWebServiceTest extends TestCase

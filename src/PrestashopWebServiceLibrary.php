@@ -1,9 +1,9 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService;
+namespace Verinder\PrestashopWebService;
 
-use Protechstudio\PrestashopWebService\Exceptions\PrestashopWebServiceException;
-use Protechstudio\PrestashopWebService\Exceptions\PrestashopWebServiceRequestException;
+use Verinder\PrestashopWebService\Exceptions\PrestashopWebServiceException;
+use Verinder\PrestashopWebService\Exceptions\PrestashopWebServiceRequestException;
 use SimpleXMLElement;
 use \Support\Facades\Log;
 /**
