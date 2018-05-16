@@ -5,7 +5,7 @@ namespace Protechstudio\PrestashopWebService;
 use Protechstudio\PrestashopWebService\Exceptions\PrestashopWebServiceException;
 use Protechstudio\PrestashopWebService\Exceptions\PrestashopWebServiceRequestException;
 use SimpleXMLElement;
-use Illuminate\Support\Facades\Log;
+use \Support\Facades\Log;
 /**
  * @package PrestaShopWebService
  */
@@ -237,10 +237,7 @@ class PrestashopWebServiceLibrary
                 echo 'END '.$title."\n";
                 echo "\n";
             } else {
-                echo '<div style="display:table;background:#CCC;font-size:8pt;padding:7px">';
-                echo '<h6 style="font-size:9pt;margin:0">'.$title.'</h6>';
-                echo '<pre>'.htmlentities($content).'</pre>';
-                echo '</div>';
+                Log::debug($title . ' :: \r\n ' . htmlentities($content));
             }
         }
     }

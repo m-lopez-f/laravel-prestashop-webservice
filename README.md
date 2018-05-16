@@ -2,6 +2,8 @@ Laravel Prestashop Web Service
 ========
 
 Laravel 5 wrapper for Prestashop Web Service Library
+This a fork of https://github.com/Silentscripter/laravel-prestashop-webservice
+Author: https://github.com/Silentscripter
 
 Installation
 ------------
@@ -180,17 +182,17 @@ Provided you got a node with several associations like category association for 
 ```xml
 ...
 <associations>
-<categories>
-<category>
-<id/>
-</category>
-</categories>
-<product_features>
-<product_feature>
-<id/>
-<id_feature_value/>
-</product_feature>
-</product_features>
+    <categories>
+        <category>
+            <id/>
+        </category>
+    </categories>
+    <product_features>
+        <product_feature>
+            <id/>
+            <id_feature_value/>
+        </product_feature>
+    </product_features>
 ...
 ```
 You can prepare the array data map for the `fillSchema` method in this way:
@@ -199,7 +201,7 @@ You can prepare the array data map for the `fillSchema` method in this way:
 $data => [
     ...
     'associations' => [
-        'categories' =>[
+        'categories' => [
             [ 'category' => ['id' => 4] ],
             [ 'category' => ['id' => 5] ],
             [ 'category' => ['id' => 11] ],
