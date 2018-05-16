@@ -36,9 +36,6 @@
     "squizlabs/php_codesniffer": "^3.2",
     "Orchestra/Testbench": "^3.5"
   },
-  "require": {
-      "illuminate/support": "5.6.*"
-  },
   "scripts": {
     "test": "vendor/bin/phpunit",
     "cs": "vendor/bin/phpcs src/*"
