@@ -1,8 +1,8 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService\Exceptions;
+namespace Verinder\PrestashopWebService\Exceptions;
 
-use Protechstudio\PrestashopWebService\PrestaShopWebserviceException as PSWException;
+use Verinder\PrestashopWebService\PrestaShopWebserviceException as PSWException;
 
 class PrestashopWebServiceException extends PSWException
 {

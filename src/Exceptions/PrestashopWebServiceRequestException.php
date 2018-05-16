@@ -1,6 +1,6 @@
 <?php
 
-namespace Protechstudio\PrestashopWebService\Exceptions;
+namespace Verinder\PrestashopWebService\Exceptions;
 
 class PrestashopWebServiceRequestException extends PrestashopWebServiceException
 {
