@@ -5,7 +5,7 @@ namespace Verinder\PrestashopWebService;
 use Verinder\PrestashopWebService\Exceptions\PrestashopWebServiceException;
 use Verinder\PrestashopWebService\Exceptions\PrestashopWebServiceRequestException;
 use SimpleXMLElement;
-use \Support\Facades\Log;
+use \Illuminate\Support\Facades\Log;
 /**
  * @package PrestaShopWebService
  */
@@ -28,7 +28,7 @@ class PrestashopWebServiceLibrary
     protected $runningInConsole;
 
     /** @var array compatible versions of PrestaShop WebService */
-    const PS_COMPATIBLE_VERSION_MIN = '1.4.0.0';
+    const PS_COMPATIBLE_VERSION_MIN = '1.6.0.0';
     const PS_COMPATIBLE_VERSION_MAX = '1.7.99.99';
 
     /**
@@ -88,7 +88,7 @@ class PrestashopWebServiceLibrary
             500 => 'Internal Server Error',
         );
 
-       if (isset($messages[$request['status_code']])) {
+        if (isset($messages[$request['status_code']])) {
             $xml = null;
             if ($request['response']) {
                 if ($format === 'XML') {
@@ -188,6 +188,7 @@ class PrestashopWebServiceLibrary
         if ($curl_params[CURLOPT_CUSTOMREQUEST] == 'PUT' || $curl_params[CURLOPT_CUSTOMREQUEST] == 'POST') {
             $this->printDebug('XML SENT', urldecode($curl_params[CURLOPT_POSTFIELDS]));
         }
+        $this->printDebug('RETURN HTTP BODY', $body);
         if ($curl_params[CURLOPT_CUSTOMREQUEST] != 'DELETE' && $curl_params[CURLOPT_CUSTOMREQUEST] != 'HEAD') {
             $this->printDebug('RETURN HTTP BODY', $body);
         }
@@ -217,6 +218,7 @@ class PrestashopWebServiceLibrary
         $response = curl_exec($session);
 
         $error = false;
+        $info = false;
         if ($response === false) {
             $error = curl_error($session);
         } else {
@@ -476,7 +478,7 @@ class PrestashopWebServiceLibrary
                 $url .= '&id_group_shop='.$options['id_group_shop'];
             }
             if (isset($options['output_format'])) {
-		$url .= '&output_format='.$options['output_format'];
+                $url .= '&output_format='.$options['output_format'];
             }
         } else {
             throw new PrestashopWebServiceException('Bad parameters given');
@@ -485,7 +487,7 @@ class PrestashopWebServiceLibrary
             (isset($options['output_format']) === true)
             ? $options['output_format']
             : 'XML';
-        $request = self::executeRequest($url,  array(CURLOPT_CUSTOMREQUEST => 'PUT', CURLOPT_POSTFIELDS => $xml));
+        $request = self::executeRequest($url, array(CURLOPT_CUSTOMREQUEST => 'PUT', CURLOPT_POSTFIELDS => $xml));
         $this->checkRequest($request, $outputFormat);
         return self::parseResponse($request['response'], $outputFormat);
     }
