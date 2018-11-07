@@ -1,6 +1,6 @@
 {
   "name": "verinder/laravel-prestashop-webservice",
-  "description": "Laravel 5 wrapper for Prestashop Web Service Library",
+  "description": "Laravel 5 wrapper for Prestashop Web Service Library, with json",
   "license": "MIT",
   "authors": [
     {
