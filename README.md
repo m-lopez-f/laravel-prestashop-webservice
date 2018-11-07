@@ -1,7 +1,7 @@
 Laravel Prestashop Web Service
 ========
 
-Laravel 5 wrapper for Prestashop Web Service Library
+Laravel 5 wrapper for Prestashop Web Service Library, in this library it's possible that reponse of Prestashop web service containt json
 This a fork of https://github.com/Silentscripter/laravel-prestashop-webservice
 Author: https://github.com/Silentscripter
 
